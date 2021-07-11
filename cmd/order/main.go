@@ -3,9 +3,11 @@ package main
 import (
 	"github.com/niqinge/order/model"
 	"github.com/niqinge/order/server"
+	"github.com/niqinge/order/utils/logger"
 )
 
 func main() {
+	logger.InitLogger("order", "./")
 	g := server.NewEngine(server.NewServer(
 		&model.Order{},
 		))

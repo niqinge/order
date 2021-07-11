@@ -22,4 +22,4 @@ build/.*
 vector/data/*.json
 vector/data/.complete
 support/tools/bin
-
+/log

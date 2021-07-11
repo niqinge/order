@@ -5,6 +5,7 @@ import (
 	"gorm.io/gorm"
 )
 
+//go:generate mockgen -destination=../mock/mock_order_dao.go -package=mock . OrderDAO
 type OrderDAO interface {
 	Create(req *model.Order) error
 	UpdateByNo(orderNo string, m map[string]interface{}) error
